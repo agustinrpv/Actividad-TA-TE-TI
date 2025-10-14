@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Tateti</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
+    <h1 class="text-4xl font-bold text-center mb-2 text-gray-800">Tateti</h1>
+    <p class="text-center text-gray-600 mb-6">Tres en Raya</p>
+    
+     Indicador de turno 
+    <div class="text-center mb-6">
+      <p class="text-xl font-semibold text-gray-700">
+        Turno de: <span id="current-player" class="text-blue-600">X</span>
+      </p>
+    </div>
+
+     Tablero de juego 
+    <div id="board" class="grid grid-cols-3 gap-3 mb-6">
+      <button class="cell" data-index="0"></button>
+      <button class="cell" data-index="1"></button>
+      <button class="cell" data-index="2"></button>
+      <button class="cell" data-index="3"></button>
+      <button class="cell" data-index="4"></button>
+      <button class="cell" data-index="5"></button>
+      <button class="cell" data-index="6"></button>
+      <button class="cell" data-index="7"></button>
+      <button class="cell" data-index="8"></button>
+    </div>
+
+     Mensaje de resultado 
+    <div id="message" class="text-center mb-4 h-8">
+      <p class="text-lg font-bold"></p>
+    </div>
+
+     Botón de reinicio 
+    <button id="restart-btn" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+      Reiniciar Juego
+    </button>
+
+     Marcador 
+    <div class="mt-6 flex justify-around text-center">
+      <div>
+        <p class="text-gray-600 text-sm">Jugador X</p>
+        <p id="score-x" class="text-2xl font-bold text-blue-600">0</p>
+      </div>
+      <div>
+        <p class="text-gray-600 text-sm">Empates</p>
+        <p id="score-draw" class="text-2xl font-bold text-gray-600">0</p>
+      </div>
+      <div>
+        <p class="text-gray-600 text-sm">Jugador O</p>
+        <p id="score-o" class="text-2xl font-bold text-purple-600">0</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
